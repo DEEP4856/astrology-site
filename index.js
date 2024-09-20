@@ -14,19 +14,19 @@
 
 
 
-  // Scroll animation for the boxes
-document.addEventListener("scroll", function() {
-    const boxes = document.querySelectorAll(".box");
+//   // Scroll animation for the boxes
+// document.addEventListener("scroll", function() {
+//     const boxes = document.querySelectorAll(".box");
   
-    boxes.forEach(box => {
-      const boxPosition = box.getBoundingClientRect().top;
-      const screenPosition = window.innerHeight / 1.3;
+//     boxes.forEach(box => {
+//       const boxPosition = box.getBoundingClientRect().top;
+//       const screenPosition = window.innerHeight / 1.3;
   
-      if (boxPosition < screenPosition) {
-        box.classList.add("show");
-      }
-    });
-  });
+//       if (boxPosition < screenPosition) {
+//         box.classList.add("show");
+//       }
+//     });
+//   });
   
 
 
@@ -86,6 +86,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+
+
+  // FAQ
+
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const faqItem = button.parentElement;
+      
+      // Toggle active class for the clicked item
+      faqItem.classList.toggle('active');
+      
+      // Hide all other answers
+      document.querySelectorAll('.faq-item').forEach(item => {
+        if (item !== faqItem) {
+          item.classList.remove('active');
+        }
+      });
+    });
+  });
+
+
 
 
 

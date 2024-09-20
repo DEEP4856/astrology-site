@@ -374,3 +374,393 @@ body {
   }
   
 /* watsapp icon */
+
+
+
+
+/* GREEN GRADIENT */
+/* Section styling with green background */
+.green-box-section {
+  background: linear-gradient(to right, #eafffa, #329476); /* Green background */
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+/* Section caption and description styling */
+.green-section-header h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  color: rgb(0, 0, 0); /* White text for the caption */
+}
+
+.green-section-header p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: rgb(0, 0, 0); /* White text for the description */
+}
+
+/* Box container with grid layout */
+.green-box-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two boxes per row */
+  /* gap: 20px; Space between boxes */
+  max-width: 1000px; /* Limit the width of the container */
+  margin: 0 auto; /* Center the grid */
+}
+
+/* Styling for individual boxes */
+.green-box {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid rgb(2, 2, 2); /* White border around each box */
+  background-color: rgba(255, 255, 255, 0.123); /* White background for the box */
+  color: #333; /* Dark text color */
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Left-align text inside the boxes */
+  border: 1px solid black;
+}
+
+/* Styling for box captions and descriptions */
+.green-box h3 {
+  font-size: 24px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  color: #000000; /* Dark text for box caption */
+}
+
+.green-box p {
+  font-size: 16px;
+  color: #020202; /* Slightly lighter text for box description */
+}
+
+
+@media (max-width:700px){
+  .green-box-container{
+    display: block;
+  }
+}
+
+/* GREEN GRADIENT */
+
+
+
+
+/* services */
+/* Section styling */
+.custom-card-section {
+  padding: 40px;
+  background: linear-gradient(to right, #eafffa, #59ceab);/* Light background for the section */
+}
+
+/* Card container with grid layout */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px; /* Space between cards */
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+}
+
+/* Individual card styling */
+.card {
+  background-color: rgba(255, 255, 255, 0.192);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  position: relative;
+  border: 1px solid black;
+  
+}
+
+/* Circular logo image */
+.card-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover;
+  margin-bottom: 20px;
+  align-items: center;
+
+}
+.logo-container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+/* Medium caption (product name) */
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333; /* Dark color for caption */
+}
+
+/* Pricing section with black background */
+.pricing {
+  background-color: black;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+
+}
+
+/* Cut price, actual price, and discount */
+.cut-price {
+  text-decoration: line-through;
+  color: #f5a623; /* Light color for cut price */
+  margin-right: 14px;
+}
+
+.actual-price {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.discount {
+  font-size: 22px;
+  color: #f5a623; /* Orange color for discount */
+}
+
+/* Tag list styling */
+.tags {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.tags li {
+  display: block;
+  background-color: #eeeeee23;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+ 
+}
+
+/* Red button at the bottom */
+.buy-now-btn {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.buy-now-btn:hover {
+  background-color: darkred; /* Darker red on hover */
+}
+
+
+.tag-icon {
+  margin-right: 8px; /* Space between the icon and the text */
+  width: 12px; /* Adjust icon size */
+  height: 12px; /* Adjust icon size */
+}
+
+
+@media (max-width:600px){
+  .card-container{
+    display: block;
+  }
+  .card{
+    margin-bottom: 5px;
+  }
+}
+
+/* services */
+
+
+
+/* contact us */
+/* Section with faded background image */
+/* Section with faded background image */
+.faded-background-section {
+  background: url('./assets/PHOTO\ \(3\)\ \(1\).jpg') no-repeat ;
+  background-size: cover;
+  padding: 90px;
+  position: relative;
+  background-position: 50% 0px; /* Horizontally centered, 20px from the top */
+
+}
+
+.faded-background-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.842); /* White faded overlay */
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Section caption and description */
+.section-caption {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Custom box container to align 3 boxes */
+.custom-box-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+ 
+@media (max-width:700px){
+  .custom-box-container{
+    display: block;
+    margin-bottom: 10px;
+  }
+  .custom-box{
+    margin-bottom: 10px
+  }
+}
+
+
+.custom-box {
+  /* background-color: rgba(255, 255, 255, 0.2); Transparent background */
+  padding: 20px;
+  width: 250px;
+  border-radius: 15px;
+  text-align: center;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Subtle shadow */
+  border: 1px solid #ccc; /* Border for the boxes */
+}
+
+/* Circular logo inside the boxes */
+.box-logo-new {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Box caption and description */
+.box-caption {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.box-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+/* contact us */
+
+
+
+
+
+
+/* FAQ SECTION */
+/* FAQ section with faded background image */
+.faq-section {
+  background: url('./assets/PHOTO\ \(1\)\ \(2\).jpg') no-repeat ;
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  position: relative;
+  background-position: 50% 0px; 
+}
+
+.faq-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7); /* White faded overlay */
+  z-index: 1;
+}
+
+.faq-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* FAQ caption and description */
+.faq-caption {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.faq-description {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* FAQ container */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* FAQ item */
+.faq-item {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+/* FAQ question (button) */
+.faq-question {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.034); /* Slight transparency */
+  padding: 15px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: rgba(255, 255, 255, 0.5); /* On hover effect */
+}
+
+/* FAQ answer */
+.faq-answer {
+  background-color: rgba(255, 255, 255, 0.493); /* Slight transparency for answer */
+  padding: 15px;
+  display: none; /* Hidden by default */
+  color: #181717;
+  transition: background-color 0.3s ease;
+}
+
+/* To reveal answer on click */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* FAQ SECTION */
