@@ -23,54 +23,64 @@ body {
 
 
   /* Banner Section */
-  .banner {
-    background-image: url('./assets/astro-background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 670px;
-    color: white;
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  
-  .banner-content {
-    max-width: 500px;
-  }
-  
-  .banner-caption {
-    font-size: 36px;
-    font-weight: bold;
-  }
-  
-  .banner-description {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  /* Transparent Buttons */
-  .banner-button {
-   
-    border: 2px solid white;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-right: 10px;
-    text-decoration: none;
-  }
+.banner {
+  background-image: url('./assets/Blog-Header_Horoscope_Clockwise.png');
+  background-size: cover;
+  background-position: center;
+  height: 670px;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
 
-  .banner-button-1{
-    background-color: white;
-    color: black;
-  }
-  
-  .banner-button:hover {
-    background-color: white
-  }
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay (50% opacity) */
+  z-index: -1; /* Ensure the overlay is behind the content */
+}
 
+/* Banner Content */
+.banner-content {
+  max-width: 500px;
+  z-index: 2; /* Ensure the content is above the overlay */
+}
 
+.banner-caption {
+  font-size: 36px;
+  font-weight: bold;
+}
 
+.banner-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 
+/* Transparent Buttons */
+.banner-button {
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.banner-button-1 {
+  background-color: white;
+  color: black;
+}
+
+.banner-button:hover {
+  background-color: white;
+}
 
 
 
@@ -81,11 +91,16 @@ body {
 
   /* about content */
 
+
   .content-description h1{
     color:#09816d ;
     font-weight: bolder;
   }
 
+
+  .content-description p{
+    color: #000000;
+  }
 
    /* Styling the section */
    .content-section {
@@ -328,6 +343,13 @@ body {
     margin-bottom: 10px;
     color: #ffffff;
   }
+
+  .counting-text-100{
+    font-size: 50px; /* Reduced size */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
   
   /* Responsive Styles */
   @media (max-width: 767px) {
@@ -338,6 +360,10 @@ body {
   
     .counting-text {
       font-size: 43px; /* Adjust font size for smaller screens */
+    }
+
+    .counting-text-100{
+      font-size: 43px;
     }
   }
   
@@ -715,7 +741,7 @@ body {
 .faq-description {
   font-size: 1rem;
   margin-bottom: 40px;
-  color: #333;
+  color: #000000;
 }
 
 /* FAQ container */
@@ -730,6 +756,10 @@ body {
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #ccc;
+}
+
+.faq-item .faq-answer{
+  color: #000000;
 }
 
 /* FAQ question (button) */
@@ -763,4 +793,111 @@ body {
   display: block;
 }
 
+
 /* FAQ SECTION */
+
+
+
+/* green section */
+/* Green Section */
+.green-section {
+  background: linear-gradient(to right, #035742, #95f1d6);  /* Green background */
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  justify-content: space-around; /* Space between logos */
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+ 
+}
+
+/* Individual Logo Items */
+.logo-item {
+  text-align: center;
+  margin: 20px;
+  
+}
+
+.logo-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 20%;
+  object-fit: cover;
+
+}
+
+.logo-caption {
+  font-size: 18px;
+  margin-top: 10px;
+  color: white;
+}
+
+.logo-description {
+  font-size: 14px;
+  color: #f1f1f1;
+  margin-top: 5px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+  }
+}
+
+/* green section */
+
+
+
+
+
+
+/* featured on */
+/* Swiper Container */
+.swiper {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 0%;
+  overflow: hidden; /* Prevents overflow */
+}
+
+/* Swiper Wrapper */
+.swiper-wrapper {
+  display: flex;
+}
+
+/* Swiper Slide */
+.swiper-slide {
+  flex: 0 0 auto; /* Flex item with automatic width */
+  width: auto; /* Allow automatic width for each slide */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px; /* Padding around each slide */
+}
+
+/* Image inside the slide */
+.swiper-slide img {
+  max-width: 100px;
+  height: 100px;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  .swiper-slide img {
+      max-width: 70px;
+  }
+}
+
+/* featured on */

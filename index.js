@@ -110,4 +110,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+  // feaqture on
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Swiper
+    var statsSwiper = new Swiper('.theme-slider', {
+        slidesPerView: 1, // Show 1 slide on small screens
+        spaceBetween: 10, // Add space between slides
+        loop: true, // Enable looping
+        autoplay: {
+            delay: 2000, // Autoplay delay of 2 seconds
+            disableOnInteraction: false, // Autoplay won't stop on user interaction
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 3, // Show 3 slides on medium screens (768px+)
+            },
+            1024: {
+                slidesPerView: 4, // Show 4 slides on large screens (1024px+)
+            }
+        }
+    });
+});
+
+
+
+
   
