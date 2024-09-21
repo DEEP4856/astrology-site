@@ -134,15 +134,13 @@
         font-size: 1.1rem;
         font-weight: normal;
         color: #fff;
+        margin-bottom: 20px;
+        line-height: 1.7;
     }
-    span.as_off.as_btn {
-        max-width: 100px;
-        background-color: #4CAF50;
-        font-family: 'PT Sans', sans-serif;
-        font-size: 16px;
-    }
-    .as_testimonial_slider_inner .swiper.as_testimonialSlider .swiper-slide.swiper-slide-active a.as_btn.as_astrologer {
-        background-color: #239a8a ;
+    .footer-right .contact-info a, p {
+        color:#fff;
+        text-decoration: none;
+        transition: all 0.5s ease;
     }
     .footer-right .contact-info p:hover {
         color: #09816d; 
@@ -150,13 +148,7 @@
     }
     .footer-right .contact-info i {
         margin-right: 10px;
-        color:white
     }
-    .footer-right .contact-info p{
-        color: white;
-        text-decoration: none;
-    }
-
     .copyright {
         font-size: 12px auto ;
         color: #fff;
