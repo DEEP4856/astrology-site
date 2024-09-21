@@ -74,28 +74,7 @@
     .footer-logo img {
         width: 300px;
         margin-bottom: 20px;
-    footer {
-        background:#196350; 
-        padding: 50px 0;
-        color: #fff;
-        display: flex;
-        justify-content: space-around;
-        align-items: top center;
-    }   
-    .footer-left {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
     }
-    .footer-logo img {
-        width: 300px;
-        margin-bottom: 20px;
-    }
-    .social-icons {
-        display: flex;
-        gap: 15px;
-        margin-left: 20px;
-        margin-top: 10px;
     .social-icons {
         display: flex;
         gap: 15px;
@@ -105,20 +84,12 @@
     }
     .social-icons a {
         font-size: 25px;
-    }
-    .social-icons a {
-        font-size: 25px;
         color: #fff;
         transition: color 0.5s ease;
     }
     .social-icons a:hover {
         color: #09816d; 
         transform:translateX(-5px);
-        transition: color 0.5s ease;
-    }
-    .social-icons a:hover {
-        color: #09816d; 
-        transform:translateX(-5px);
     }
  
     .footer-center h4 {
@@ -126,46 +97,25 @@
         font-weight: bold;
         color: aqua;
         margin-bottom: 20px;
- 
-    .footer-center h4 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: aqua;
-        margin-bottom: 20px;
     }
-    .footer-center ul {
-        list-style: none;
     .footer-center ul {
         list-style: none;
         padding: 0;
         line-height: 2;
-        line-height: 2;
     }
-    .footer-center ul li {
-        margin-bottom: 10px;
     .footer-center ul li {
         margin-bottom: 10px;
         transition: all 0.5s;
         text-align: center;
-        text-align: center;
     }
     .footer-center ul li:hover{
         transform:translateX(-5px);
-    .footer-center ul li:hover{
-        transform:translateX(-5px);
     }
-    .footer-center ul li a {
-        text-decoration: none;
     .footer-center ul li a {
         text-decoration: none;
         color: #fff;
         font-size: 1.1rem;
         transition: color 0.3s ease;
-        font-size: 1.1rem;
-        transition: color 0.3s ease;
-    }
-    .footer-center ul li a:hover {
-        color: #00aff0;
     }
     .footer-center ul li a:hover {
         color: #00aff0;
@@ -173,14 +123,7 @@
 
     .footer-right {
         text-align: center;
-    .footer-right {
-        text-align: center;
     }
-    .footer-right h4 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: aqua;
-        margin-bottom: 20px;
     .footer-right h4 {
         font-size: 1.5rem;
         font-weight: bold;
@@ -190,29 +133,28 @@
     .footer-right address {
         font-size: 1.1rem;
         font-weight: normal;
-    .footer-right address {
-        font-size: 1.1rem;
-        font-weight: normal;
         color: #fff;
-        margin-bottom: 20px;
-        line-height: 1.7;
     }
-
-
-    .footer-right .contact-info a {
-        color:#fff;
-        text-decoration: none;
-        transition: all 0.5s ease;
+    span.as_off.as_btn {
+        max-width: 100px;
+        background-color: #4CAF50;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 16px;
     }
-    .footer-right .contact-info p:hover {
-        color: #09816d; 
-        transform:translateX(-5px);
+    .as_testimonial_slider_inner .swiper.as_testimonialSlider .swiper-slide.swiper-slide-active a.as_btn.as_astrologer {
+        background-color: #239a8a ;
+    }
     .footer-right .contact-info p:hover {
         color: #09816d; 
         transform:translateX(-5px);
     }
     .footer-right .contact-info i {
         margin-right: 10px;
+        color:white
+    }
+    .footer-right .contact-info p{
+        color: white;
+        text-decoration: none;
     }
 
     .copyright {
@@ -224,36 +166,9 @@
     }
     .copyright p{
         font-size: 14px ;
-    .copyright p{
-        font-size: 14px ;
         margin: 0;
         padding: 10px 0px;
     }
-
-    @media (max-width: 800px) {
-        footer {
-            flex-direction: column;
-            align-items: center;
-        }
-        .footer-left, .footer-center, .footer-right {
-            margin: 30px 50px;
-        }
-        .footer-logo img {
-            width: 300px;
-            margin-bottom: 20px;
-        }
-
-    }
-    @media (max-width: 400px) {
-        .footer-logo img {
-            width: 200px;
-            margin-bottom: 20px;
-        }
-        .copyright p{
-            font-size: 10px ;
-            margin: 0;
-            padding: 10px 0px;
-        }
 
     @media (max-width: 800px) {
         footer {
