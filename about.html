@@ -74,10 +74,10 @@
     <!-- Banner Section -->
     <style>
         .banner {
-            background-image: url('./assets/about-banner.jpg');
+            background-image: url('./assets/bg.png');
             background-size: cover;
-            background-position: center;
-            height: 280px;
+            background-position: center center;
+            height: 550px;
             color: white;
             display: flex;
             align-items: center;
@@ -122,7 +122,7 @@
      <style>
         .about-section {
             padding: 50px 0;
-            background: linear-gradient(180deg, #000000,#01221a); 
+            background: linear-gradient(90deg, #000000,#01221C,#011A1C); 
         }
         .about-image img {
             max-width: 500px;
@@ -296,7 +296,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 10px;
+            padding: 5px;
             width: 10%;
         }
         .swiper-slide img {
@@ -332,7 +332,7 @@
             </div>
             <div class="swiper theme-slider">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide  ">
+                    <div class="swiper-slide ">
                         <div class="row px-lg-12 justify-content-center">
                             <div class="col-md-12 text-center  ">
                                 <img class="rounded-3 mx-auto img-fluid" src="./assets/feature-01.png" alt="Member" />
@@ -602,21 +602,22 @@
         @media (max-width: 480px) {
             .why-section {
                 background: linear-gradient(60deg, #162821, #27af7f,#022720); 
-                height: 1300px;
+                height: 1250px;
             }  
             .row {
                 justify-content: center;
                 align-items: center;
             }
             .why-image1 {
-                max-width: 350px;
+                max-width: 600px;
                 justify-content: center;
                 align-items: center;
+                display: flex;
             }
             .why-image1 img {
-                opacity: 0.6;
-                width: 300px;
-                height: 600px;
+                opacity: 1;
+                width: 480px;
+                height: 500px;
             }
             .why-text {
                 margin-bottom: 30px;
