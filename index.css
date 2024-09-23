@@ -54,7 +54,7 @@ body {
 
 .banner-caption {
   font-size: 36px;
-  font-weight: bold;
+  font-weight: bold; 
 }
 
 .banner-description {
@@ -92,7 +92,7 @@ body {
   /* about content */
 
 
-  .content-description h1{
+  .content-description h3{
     color:#09816d ;
     font-weight: bolder;
   }
@@ -130,7 +130,7 @@ body {
   
   /* Small Caption */
   .small-caption {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     color: #777;
     text-transform: uppercase;
@@ -139,14 +139,14 @@ body {
   
   /* Large Caption */
   .large-caption {
-    font-size: 40px;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
   }
   
   /* Description */
   .section-description {
-    font-size: 18px;
+    font-size: 10px;
     color: #555;
     max-width: 600px;
     margin: 0 auto;
@@ -271,15 +271,15 @@ body {
   }
   
   .section-caption {
-    font-size: 32px;
+    font-size: 25px !important;
     font-weight: bold;
     margin-bottom: 15px;
     color: #09816d
   }
   
   .section-description {
-    font-size: 18px;
-    color: #555;
+    font-size: 15px !important;
+    color: #131212 !important;
   }
   
   
@@ -301,7 +301,7 @@ body {
   }
   
   .section-caption-box {
-    font-size: 25px;
+    font-size: 15px;
     font-weight: bold;
     color: #ffffff;
   }
@@ -315,7 +315,7 @@ body {
   .full-width-box {
     background-size: cover;
     background-position: center;
-    padding: 60px 0;
+    padding: 40px 0 !important;
     color: white;
     position: relative;
   }
@@ -323,7 +323,7 @@ body {
   /* Box Styling */
   .section-box {
 
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     margin: 0 auto;
     transition: transform 0.3s ease;
@@ -338,14 +338,14 @@ body {
   
   /* Counting Text */
   .counting-text {
-    font-size: 50px; /* Reduced size */
+    font-size: 32px; /* Reduced size */
     font-weight: bold;
     margin-bottom: 10px;
     color: #ffffff;
   }
 
   .counting-text-100{
-    font-size: 50px; /* Reduced size */
+    font-size: 32px; /* Reduced size */
     font-weight: bold;
     margin-bottom: 10px;
     color: #ffffff;
@@ -801,7 +801,7 @@ body {
 /* green section */
 /* Green Section */
 .green-section {
-  background: linear-gradient(to right, #035742, #95f1d6);  /* Green background */
+ background-color: #009966;
   padding: 40px;
   display: flex;
   justify-content: center;
@@ -828,17 +828,17 @@ body {
 }
 
 .logo-image {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 20%;
   object-fit: cover;
 
 }
 
 .logo-caption {
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 10px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .logo-description {
@@ -860,8 +860,8 @@ body {
 
 
 
+/* Featured On Section */
 
-/* featured on */
 /* Swiper Container */
 .swiper {
   width: 100%;
@@ -899,5 +899,3 @@ body {
       max-width: 70px;
   }
 }
-
-/* featured on */
