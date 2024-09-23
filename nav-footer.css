@@ -3,48 +3,57 @@
 
 
 /* Navbar Styling */
+/* Navbar Styling */
 .navbar {
     background-color: transparent !important;
-    position: fixed; /* Fixed at the top */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  /* Navbar background when scrolled */
-  .navbar.scrolled {
+}
+
+/* Default state for all screens */
+.navbar .navbar-brand img {
+    height: 50px;
+}
+
+/* Hide logo initially only on small screens */
+@media (max-width: 768px) {
+    .navbar .navbar-brand img {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Show logo when scrolled on small screens */
+    .navbar.scrolled .navbar-brand img {
+        opacity: 1;
+    }
+}
+
+/* Navbar background when scrolled */
+.navbar.scrolled {
     background-color: white !important;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Adjusting logo size */
-  .navbar-brand img {
-    height: 50px;
-  }
-  
-  /* Navbar links */
-  .nav-item .nav-link {
+}
+
+/* Navbar links */
+.nav-item .nav-link {
     color: white;
     font-size: 16px;
     font-weight: bold;
-  }
-  
-  /* Change text color when navbar background becomes white */
-  .navbar.scrolled .nav-link , .toggle-icon{
+}
+
+/* Change text color when navbar background becomes white */
+.navbar.scrolled .nav-link, .toggle-icon {
     color: black !important;
-  }
-  
-  /* Navbar hover effect */
-  .nav-item .nav-link:hover {
+}
+
+/* Navbar hover effect */
+.nav-item .nav-link:hover {
     color: yellow;
-  }
-  
-
-
-
-
+}
 
 
 /* navbar */

@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+// featured on
   document.addEventListener('DOMContentLoaded', function () {
     // Initialize Swiper
     var statsSwiper = new Swiper('.theme-slider', {
