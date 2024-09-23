@@ -109,31 +109,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-  // feaqture on
-  
   document.addEventListener('DOMContentLoaded', function () {
     // Initialize Swiper
     var statsSwiper = new Swiper('.theme-slider', {
-        slidesPerView: 1, // Show 1 slide on small screens
-        spaceBetween: 10, // Add space between slides
-        loop: true, // Enable looping
+        slidesPerView: 1, // Default for extra small screens
+        spaceBetween: 10, // Space between slides
+        loop: true, // Enable infinite loop
+        speed: 700, // Adjust speed for smoother continuous sliding
         autoplay: {
-            delay: 2000, // Autoplay delay of 2 seconds
-            disableOnInteraction: false, // Autoplay won't stop on user interaction
+            delay: 0, // Continuous autoplay without delay
+            disableOnInteraction: false, // Prevent stopping autoplay on user interaction
         },
         breakpoints: {
-            768: {
-                slidesPerView: 3, // Show 3 slides on medium screens (768px+)
+            0: { // For mobile screens (up to 768px)
+                slidesPerView: 4, // Show 4 slides at a time
+                spaceBetween: 10,
+            },
+            768: { // For tablets and up
+                slidesPerView: 4, // Show 4 slides on medium+ screens
+                spaceBetween: 10,
             },
             1024: {
-                slidesPerView: 4, // Show 4 slides on large screens (1024px+)
+                slidesPerView: 4, // Show 4 slides on larger screens
+                spaceBetween: 10,
             }
         }
     });
 });
-
-
-
-
-  
