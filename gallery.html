@@ -125,7 +125,8 @@
             background: linear-gradient(360deg, #f4f4f4, #f0f0f0, #e5e5e5, #c2ffed);  
             background-size: cover;
             background-position: center;
-            height: 1000px;
+            height: auto;
+            padding: 20px;
             color: white;
             display: flex;
             align-items: center;
@@ -135,171 +136,152 @@
             overflow: hidden;
         } 
 
+        .gallery-grid img {
+            opacity: 0;
+            animation: zoom-in 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        .gallery-grid img.loaded {
+            opacity: 1;
+            animation: zoom-in 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }        
+        @keyframes zoom-in {
+            0% {
+                transform: scale(0.7); 
+            }
+            100% {
+                transform: scale(1); 
+            }
+        }    
+
         @media(min-width: 1024px) {
             .gallery-grid {
-                --s: 280px; 
-                --g: 50px;  
+                --s: 300px; 
+                --g: 20px;  
                 --f: 1.5;
-                
-                display: grid;
                 gap: var(--g);
                 width: calc(3*var(--s) + 2*var(--g));
-                aspect-ratio: 1;
+                
+                display: grid;
                 grid-template-columns: repeat(3,auto);
+                aspect-ratio: 1;    
             }
             .gallery-grid > img {
                 width: 0;
                 height: 0;
-                border-radius: 8% 0 8% 0;
                 min-height: 100%;
                 min-width: 100%;
+                border-radius: 8% 0 8% 0;
                 object-fit: cover;
                 cursor: pointer;
-                filter: grayscale(50%);
-                transition: .35s linear;
+                transition: filter 0.5s ease-in;
             }
             .gallery-grid img:hover{
-                filter: grayscale(0);
-                width:  calc(var(--s)*var(--f));
-                height: calc(var(--s)*var(--f));
-                border-radius: 5%;
-            }
-            .image-modal {
-                display: none; 
+                filter: brightness(50%);
             }
         }
         
         @media(min-width: 800.01px) and (max-width: 1024px) {
+            .gallery-section { 
+                padding: 30px;
+            }
             .gallery-grid {
                 --s: 200px; 
-                --g: 50px;  
+                --g: 20px;  
                 --f: 1.5;
-                
-                display: grid;
                 gap: var(--g);
                 width: calc(3*var(--s) + 2*var(--g));
-                aspect-ratio: 1;
-                grid-template-columns: repeat(2,auto);
+                
+                display: grid;
+                grid-template-columns: repeat(3,auto);
+                aspect-ratio: 1;    
             }
             .gallery-grid > img {
                 width: 0;
                 height: 0;
-                border-radius: 8% 0 8% 0;
                 min-height: 100%;
                 min-width: 100%;
+                border-radius: 8% 0 8% 0;
                 object-fit: cover;
                 cursor: pointer;
-                filter: grayscale(50%);
-                transition: .35s linear;
+                transition: filter 0.5s ease-in;
             }
             .gallery-grid img:hover{
-                filter: grayscale(0);
-                width:  calc(var(--s)*var(--f));
-                height: calc(var(--s)*var(--f));
-                border-radius: 5%;
-            }
-            .image-modal {
-                display: none;
+                filter: brightness(50%);
             }
         }
 
-        .image-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 98vw;
-            height: 100vh;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;  
-            background: rgba(0, 0, 0, 0.9);  
-            overflow: hidden;
-        }
-
-        .image-modal .image-view {
-            width: 80%;
-            height: 80%;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image-modal .image-view img {
-            max-width: 100%;
-            max-height: 100%;
-            border-radius: 0;
-            z-index: 1000;  
-        }
-
-        .image-modal .image-view .close-btn {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            font-size: 24px;
-            color: white;
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 0px 10px;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 1001;
-            transform: translateX(-50%);
-        }
             
         @media (min-width: 600.01px) and (max-width: 800px) {
             .gallery-section {
-                height: 950px;
+                padding: 20px;
+                align-items:normal;
+                justify-content:center;
             }
 
             .gallery-grid {
+                --s: 200px; 
+                --g: 20px;  
+                --f: 1.5;
+                gap: var(--g);
+                
+                width: calc(3*var(--s) + 2*var(--g));
+                height: 1300px;
                 display: grid;
-                width: 500px;
-                gap: 10px; 
-                aspect-ratio: 1;
                 grid-template-columns: repeat(2, 1fr);
+                aspect-ratio: 1;    
             }
 
             .gallery-grid img {
-                width: 100%;
-                height: 200px;
+                width: 0;
+                height: 0;
+                min-height: 100%;
+                min-width: 100%;
                 border-radius: 8% 0 8% 0;
                 object-fit: cover;
                 cursor: pointer;
-                transition: transform 0.3s ease;
+                transition: filter 0.5s ease-in;
             }
 
             .gallery-grid img:hover {
-                transform: scale(1.05);
+                filter: brightness(50%);
             }
         }
 
         @media(max-width: 600px) {
             .gallery-section {
-                height: 1900px;
+                height: auto; 
+                padding: 20px;
+                align-items: normal;
+                justify-content: center;
             }
 
             .gallery-grid {
+                gap: 30px;
+                width: 100%; 
+                padding: 20px;
                 display: grid;
-                width: 250px;
-                gap: 10px; 
-                aspect-ratio: 1;
                 grid-template-columns: 1fr; 
             }
 
             .gallery-grid img {
-                width: 100%;
-                height: 250px;
+                width: 100%; 
+                aspect-ratio: 1 / 1;
                 border-radius: 8% 0 8% 0;
-                object-fit: cover;
+                object-fit: cover; 
                 cursor: pointer;
+		        transition: transform 0.3s ease, filter 0.5s ease-in, opacity 0.5s ease; 
+            }
+            .gallery-grid img:hover {
+                filter: brightness(50%);
+                transform: scale(1.05); 
             }
         }
     </style>
 
 
     <section class="gallery-section">
-        <div class="gallery-grid">
+        <div class="gallery-grid align-items-center">
             <img src="./assets/IMG_1752.JPG" alt="Image 1">
             <img src="./assets/IMG_1754.JPG" alt="Image 2">
             <img src="./assets/IMG_1755.JPG" alt="Image 3">
@@ -310,49 +292,18 @@
         </div>
     </section>
 
-    <div class="image-modal">
-        <div class="image-view mx-5 align-items-center justify-content-center">
-            <img src="" alt="Full-screen Image">
-                <button class="close-btn">✖</button>
-            </img>
-        </div>     
-    </div>
-
     <script>
-        const images = document.querySelectorAll('.gallery-grid img');
-        const modal = document.querySelector('.image-modal');
-        const modalImg = document.querySelector('.image-modal img');
-        const closeButton = document.querySelector('.close-btn');
-
-        function handleImageClick() {
-            const screenWidth = window.innerWidth;
-            if (screenWidth <= 800) {
-                images.forEach(image => {
-                    image.addEventListener('click', () => {
-                        modal.style.display = 'flex';
-                        modalImg.src = image.src;
-                    });
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll('.gallery-grid img');
+            images.forEach(img => {
+                img.addEventListener('load', () => {
+                    img.classList.add('loaded'); 
                 });
-
-                closeButton.addEventListener('click', () => {
-                    modal.style.display = 'none';
-                });
-
-                modal.addEventListener('click', (e) => {
-                    if (e.target !== modalImg && e.target !== closeButton) {
-                        modal.style.display = 'none';
-                    }
-                });
-            } else {
-                images.forEach(image => {
-                    image.removeEventListener('click', () => {});
-                });
-            }
-        }
-
-        handleImageClick();
-        window.addEventListener('resize', handleImageClick);
+                img.src = img.src; 
+            });
+        });
     </script>
+   
 
     
     <!-- footer start -->
