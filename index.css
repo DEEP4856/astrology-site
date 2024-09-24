@@ -38,10 +38,10 @@ body {
 
 @media (max-width:600px){
   .banner{
-    background-image: url('./assets/Mobile\ banner.png');
+    background-image: url('./assets/mobilebanner\ 2.png');
     background-size: cover;
     background-position: center;
-    height: 740px;
+    height: 750px;
     display: flex;
   align-items: center;
   }
