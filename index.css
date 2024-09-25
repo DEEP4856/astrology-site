@@ -834,7 +834,7 @@ body {
 /* green section */
 /* Green Section */
 .green-section {
- background-color: #0e6270;
+ background-color:  #177591;
   padding: 40px;
   display: flex;
   justify-content: center;
@@ -944,6 +944,13 @@ body {
 
 /* all services */
 /* General Section Styling */
+
+.royal-blue-grayscale-logo{
+  filter: saturate(250%) hue-rotate(420deg) brightness(1.2);
+  transition: filter 0.3s ease;
+}
+
+
 .section {
   padding: 60px 0;
   background-color: #f9f9f9;
@@ -993,7 +1000,7 @@ body {
 }
 
 .btn-green {
-  background-color: #1B6E64;
+  background-color: #3673b9;
   color: white;
   padding: 10px 20px;
   border-radius: 12px;
@@ -1001,7 +1008,7 @@ body {
 }
 
 .btn-green:hover {
-  background-color: #1B6E64;
+  background-color: #3673b9;
 }
 
 /* Responsive Styles */
