@@ -139,19 +139,21 @@
 
         .gallery-grid img {
             opacity: 0;
-            animation: zoom-in 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            transform: scale(0.8);
+            animation-fill-mode: forwards;
         }
 
-        .gallery-grid img.loaded {
-            opacity: 1;
+        .gallery-grid img.zoom-in {
             animation: zoom-in 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
         }        
         @keyframes zoom-in {
             0% {
                 transform: scale(0.7); 
+                opacity: 0;
             }
             100% {
                 transform: scale(1); 
+                opacity: 1;
             }
         }    
 
@@ -294,13 +296,35 @@
     </section>
 
     <script>
+        //document.addEventListener("DOMContentLoaded", function () {
+          //  const images = document.querySelectorAll('.gallery-grid img');
+            //images.forEach(img => {
+              //  img.addEventListener('load', () => {
+                //    img.classList.add('loaded'); 
+               // });
+                //img.src = img.src; 
+            //});
+        //});
         document.addEventListener("DOMContentLoaded", function () {
             const images = document.querySelectorAll('.gallery-grid img');
-            images.forEach(img => {
-                img.addEventListener('load', () => {
-                    img.classList.add('loaded'); 
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('zoom-in');
+                        observer.unobserve(entry.target); // Stop observing once animation is triggered
+                    }
                 });
-                img.src = img.src; 
+            }, observerOptions);
+
+            images.forEach(image => {
+                observer.observe(image);
             });
         });
     </script>
